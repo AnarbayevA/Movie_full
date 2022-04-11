@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container text-center">
+            <h1 class="">Movies catalog</h1>
+        </div>
+        
+    </header>
+    
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <form class="mb-4" action="/action_page.php">
+                        <div class="mb-3 mt-3">
+                            <input type="text" class="form-control" id="search-input" placeholder="ave" name="email">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <input type="number" class="form-control" id="movie-reating" max="9" min="5" step="0.1" placeholder="Rating" name="rating">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <input type="number" class="form-control" id="movie-year" max="2022" min="1990" step="1" placeholder="Movie year" name="rating">
+                        </div>
+                        
+                        <select id="categories-list" class="form-select mb-3" >
+                            <option>All</option>
+                        </select>
+                        
+                        <select class="form-select mb-3">
+                            <option>Rating (high to low)</option>
+                            <option>Rating (low to high)</option>
+                        </select>
+                        
+                        <div class="d-grid">
+                            <button id="search-button" type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                        
+                    </form>
+                    
+                    <div class="">
+                        <h3 class="h2">
+                            Bookmarked movies
+                        </h3>
+                        
+                        <ul class="list-group bookmark-wrapper">
+                            <!-- <li class="list-group-item list-group-item-action">
+                                <span class=" d-block pb-2">Avangers: Infinity War</span>
+                                <button type="button" class="btn btn-danger">Remove</button>
+                            </li>
+                            
+                            <li class="list-group-item list-group-item-action">
+                                <span class=" d-block pb-2">The Avengers</span>
+                                <button type="button" class="btn btn-danger">Remove</button>
+                            </li>
+                            
+                            <li class="list-group-item list-group-item-action">
+                                <span class=" d-block pb-2">12 Years a Slave</span>
+                                <button type="button" class="btn btn-danger">Remove</button>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="col-8">
+                    <h4 class="h5 ">Search result: <span class="search-result">39</span></h4>
+                    
+                    <div class="alert alert-info">Use the form on the left to search for a movie</div>
+                    
+                    <div class="row wrapper-div d-flex flex-wrap">
+                        <div class="card col mb-3">
+                            <img class="card-img-top" src="https://picsum.photos/500/300" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">Avengers: Infinity War</h4>
+                                
+                                <p class="card-text">
+                                    <img class="me-2" src="https://picsum.photos/15" alt="">
+                                    <span class="movie-date">2018</span>
+                                </p>
+                                
+                                <div class="rating pb-3">
+                                    <img src="https://picsum.photos/15" alt="">
+                                    <span class="rating-stark">8.7</span>
+                                </div>
+                                
+                            </div>
+                            <div class="btn-group d-flex gap-4">
+                                <button type="button" class="btn btn-outline-primary">Watch trailer</button>
+                                <button type="button" class="btn btn-outline-secondary">More info</button>
+                                <button type="button" class="btn btn-outline-danger">Bookmark</button>
+                            </div>
+                        </div>
+                        <div class="card col mb-3">
+                            <img class="card-img-top" src="https://picsum.photos/500/300" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">Avengers: Infinity War</h4>
+                                
+                                <p class="card-text">
+                                    <img class="me-2" src="https://picsum.photos/15" alt=""><span class="movie-date">2018</span>
+                                </p>
+                                
+                                <div class="rating pb-3">
+                                    <img src="https://picsum.photos/15" alt=""><span class="rating-stark">8.7</span>
+                                </div>
+                                
+                            </div>
+                            <div class="btn-group d-flex gap-4">
+                                <button type="button" class="btn btn-outline-primary">Watch trailer</button>
+                                <button type="button" class="btn btn-outline-secondary">More info</button>
+                                <button type="button" class="btn btn-outline-danger">Bookmark</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <ul class="row list-inline gap wrapper_div">
+                        <li class="col-6 mb-3 ">
+                            <div class="card">
+                                <img class="card-img-top" src="https://picsum.photos/500/300" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">Avengers: Infinity War</h4>
+                                    
+                                    <p class="card-text">
+                                        <img class="me-2" src="https://picsum.photos/15" alt=""><span class="movie-date">2018</span>
+                                    </p>
+                                    
+                                    <div class="rating pb-3">
+                                        <img src="https://picsum.photos/15" alt=""><span class="rating-stark">8.7</span>
+                                    </div>
+                                    
+                                </div>
+                                <div class="btn-group d-flex gap-4">
+                                    <button type="button" class="btn btn-outline-primary">Watch trailer</button>
+                                    <button type="button" class="btn btn-outline-secondary">More info</button>
+                                    <button type="button" class="btn btn-outline-danger">Bookmark</button>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="col-6 mb-3">
+                            <div class="card">
+                                <img class="card-img-top" src="https://picsum.photos/500/300" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">Avengers: Infinity War</h4>
+                                    <p class="card-text"><img class="me-2" src="https://picsum.photos/15" alt=""><span class="movie-date">2018</span></p>
+                                    <div class="rating pb-3"><img src="https://picsum.photos/15" alt=""><span class="rating-stark">8.7</span></div>
+                                    <div class="btn-group d-flex gap-4">
+                                        <button type="button" class="btn btn-outline-primary">Watch trailer</button>
+                                        <button type="button" class="btn btn-outline-secondary">More info</button>
+                                        <button type="button" class="btn btn-outline-danger">Bookmark</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul> -->
+                    
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <template id="movie-template">
+        <div class="card  mb-3 col-6" >
+            <img class="card-img-top" src="https://picsum.photos/500/300" alt="Card image">
+            <div class="card-body">
+                <h4 class="card-title text-danger"></h4>
+
+                <p class="m-0 p-0 h5 text-info">Categories: <span class="movie-categories text-black"></span></p>
+                
+                <p class="card-text">
+                    <p class="p-0 m-0 h5 text-info">Year: <span class="date-movie text-black"></span></p>
+                </p>
+                
+                <div class="rating pb-3">
+                    <p class="h5 text-info">Rating: <span class="rating-movie text-black"></span></p>
+                    
+                </div>
+                
+            </div>
+            <div class="btn-group d-flex gap-4">
+                <a href="" class="btn btn-outline-primary btn-movie-trailer">Watch trailer</a>
+                <button type="button" class="btn btn-outline-secondary">More info</button>
+                <button type="button" class="btn btn-outline-danger bookmark_btn">Bookmark</button>
+            </div>
+        </div>
+    </template>
+
+    <template id="bookmark-template">
+        <li class="list-group-item list-group-item-action">
+            <p class="fw-bold d-block pb-2 movie-title">Avangers: Infinity War</p>
+            <button type="button" class="btn btn-danger remove-btn">Remove</button>
+        </li>
+    </template>
+
+
+    
+    <!-- <template id="movie-template">
+        <li class="col-6 mb-3 wrapper">
+            <div class="card">
+                <img class="card-img-top" alt="Card image" src="http://i.ytimg.com/vi/4hZi5QaMBFc/hqdefault.jpg">
+                <div class="card-body">
+                    <h4 class=" ">Patton Oswalt: Annihilation</h4>
+                    
+                    <p class="card-text">
+                        <img class="me-2" src="https://picsum.photos/15">
+                        <span class="date-movie">2017</span>
+                    </p>
+                    
+                    <div class="pb-3">
+                        <img src="https://picsum.photos/15" class="me-2">
+                        <span class="rating-movie">7.4</span>
+                    </div>
+                    
+                    <div class="btn-group d-flex gap-4">
+                        <a href="" class="btn btn-outline-primary">Watch trailer</a>
+                        <button class="btn btn-outline-secondary">More infor</button>
+                        <button class="btn btn-outline-danger">Bookmark</button>
+                    </div>
+                </div>
+            </div>
+        </li>      
+        
+    </template> -->
+    
+    
+    
+    
+    <script src="./bootstrap/bootstrap.js"></script>
+    <script src="./js/movies.js"></script>
+    <script src="./js/main.js"></script>
+    
+    <!-- https://picsum.photos/200/300 -->
+</body>
+</html>
+
